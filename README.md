@@ -133,7 +133,3 @@ You can use different Ollama models by updating `.env`:
 - `nomic-embed-text` (default)
 - `mxbai-embed-large` (larger, better quality)
 - `all-minilm` (smaller, faster)
-
-## License
-
-MIT
