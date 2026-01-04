@@ -71,7 +71,7 @@ A chat-based Retrieval-Augmented Generation (RAG) application for PDF document a
    python -m src.app
    ```
 
-3. **Open your browser** at `http://localhost:7860`
+3. **Open your browser** at `http://127.0.0.1:7860`
 
 4. **Upload PDFs** using the file upload section
 
@@ -104,9 +104,8 @@ doc-insight-agent/
 │   ├── config.py              # Configuration settings
 │   ├── core/
 │   │   ├── document_processor.py  # PDF loading & splitting
-│   │   ├── embeddings.py          # Ollama embeddings
 │   │   ├── llm.py                 # Ollama LLM wrapper
-│   │   └── vector_store.py        # ChromaDB management
+│   │   └── vector_store.py        # FAISS vector store & embeddings
 │   ├── chains/
 │   │   ├── qa_chain.py            # Q&A with retrieval
 │   │   ├── summarization_chain.py # Document summarization
@@ -115,7 +114,7 @@ doc-insight-agent/
 │       └── prompts.py             # Prompt templates
 ├── data/
 │   ├── uploads/               # Temporary PDF storage
-│   └── chroma_db/             # Vector database
+│   └── vector_store/          # FAISS index storage
 ├── requirements.txt
 └── README.md
 ```

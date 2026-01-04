@@ -38,7 +38,7 @@ env/
 
 # Data directories
 data/uploads/
-data/chroma_db/
+data/vector_store/
 
 # Jupyter
 .ipynb_checkpoints/
