@@ -19,11 +19,8 @@ class Settings(BaseSettings):
 
     # Paths
     BASE_DIR: Path = Path(__file__).parent.parent
-    CHROMA_PERSIST_DIR: Path = BASE_DIR / "data" / "chroma_db"
+    VECTOR_STORE_DIR: Path = BASE_DIR / "data" / "vector_store"
     UPLOAD_DIR: Path = BASE_DIR / "data" / "uploads"
-
-    # ChromaDB settings
-    COLLECTION_NAME: str = "documents"
 
     class Config:
         env_file = ".env"

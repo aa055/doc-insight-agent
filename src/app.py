@@ -264,7 +264,7 @@ def create_app():
 def main():
     """Main entry point."""
     settings.UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
-    settings.CHROMA_PERSIST_DIR.mkdir(parents=True, exist_ok=True)
+    settings.VECTOR_STORE_DIR.mkdir(parents=True, exist_ok=True)
 
     print("=" * 50)
     print("Starting Doc Insight Agent")
