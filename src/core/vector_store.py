@@ -57,13 +57,13 @@ class VectorStoreManager:
         self.embedder = OllamaEmbedder()
         self.index: Optional[faiss.IndexFlatIP] = None
         self.documents: List[Document] = []
-        self.index_path = settings.CHROMA_PERSIST_DIR / "faiss.index"
-        self.docs_path = settings.CHROMA_PERSIST_DIR / "documents.pkl"
+        self.index_path = settings.VECTOR_STORE_DIR / "faiss.index"
+        self.docs_path = settings.VECTOR_STORE_DIR / "documents.pkl"
         self._initialize_store()
 
     def _initialize_store(self):
         """Initialize or load existing FAISS index."""
-        settings.CHROMA_PERSIST_DIR.mkdir(parents=True, exist_ok=True)
+        settings.VECTOR_STORE_DIR.mkdir(parents=True, exist_ok=True)
 
         if self.index_path.exists() and self.docs_path.exists():
             # Load existing index
